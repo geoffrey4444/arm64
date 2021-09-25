@@ -11,5 +11,5 @@ _start:
   movk x3, 0x68, lsl 48
 
   str x3, [sp, -16]!
-  mov x0, sp
-  svc 0
+  add x0, sp, x1
+  svc #0x1337
