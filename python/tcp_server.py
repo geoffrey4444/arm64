@@ -1,6 +1,6 @@
 import socket
 
-IP = '0.0.0.0'
+IP = '192.168.1.155'
 PORT = 9998
 
 
@@ -14,7 +14,7 @@ def main():
         client_sock, address = sock.accept()
         print(f'[*] Accepted connection from {address[0]}:{address[1]}')
         request = client_sock.recv(1024)
-        print('[*] Received: (request.decode("utf-8"))')
+        print(f'[*] Received: {request.decode("utf-8")}')
         client_sock.send(b"OK")
 
 

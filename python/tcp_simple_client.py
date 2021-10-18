@@ -1,6 +1,6 @@
 import socket
 
-host = '0.0.0.0'
+host = '192.168.1.155'
 port = 9998
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -13,4 +13,4 @@ while (True):
         break
     print(msg.decode("utf-8"))
 
-ssock.close()
+sock.close()
